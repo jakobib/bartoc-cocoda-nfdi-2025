@@ -1,0 +1,9 @@
+format:
+  revealjs:
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: vzglogo.png
+    incremental: true
+    css: style.css

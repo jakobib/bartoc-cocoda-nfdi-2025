@@ -1,0 +1,254 @@
+---
+title: Der Einsatz von BARTOC und Cocoda für die NFDI 
+subtitle: N4O Community Cluster Authority Files & Community-driven Vocabularies
+date: 2025-06-04
+authors:
+ - name: Jakob Voß
+---
+
+# Übersicht
+
+1. Terminologien
+2. NFDI & VZG
+3. BARTOC & Cocoda
+5. Anwendungsfall Knowledge Graph
+
+# Terminologien 
+
+## Beispiel
+
+- Abendstern / Morgenstern / Venus
+- Venus (Göttin) / Venus (Planet)
+- *Venus (Planet)* ein Ort\
+  <https://d-nb.info/gnd/4062527-8> 
+- *Venus (Göttin)* eine Person\
+  <https://d-nb.info/gnd/11876800X> 
+
+## Terminologien
+
+- **Ontologie**\
+  Datenmodell: *Ort, Person, Thema, Zahl...*
+- **Vokabular**\
+  Werteliste: *Alles andere*
+- Jeder Eintrag (Klasse, Konzept, Entität...) hat eine ID,\
+  im Idealfall eine URI
+
+## Terminologie-Mappings
+
+- GND <https://d-nb.info/gnd/4062527-8> *Venus (Planet)*
+- = Wikidata <http://www.wikidata.org/entity/Q313> *Venus*
+- ≈ DDC <http://dewey.info/class/523.42/e23/> *Venus*
+- < BK <http://uri.gbv.de/terminology/bk/39.53> *Planeten*
+
+## Möglichkeiten zur Erstellung und Pflege von Mappings
+
+A) Als Teil *eines* Vokabulars (z.B. GND-Mappings)
+B) In Dateien (CSV, SSSOM, RDF/Turtle...) 
+C) In einer Mapping-Anwendung mit Datenbank und Benutzeroberfläche (**Cocoda**, MSCR, Amalgame...)
+
+# NFDI
+
+## Was ist die Nationale Forschungsdateninfrastruktur?
+
+![](nfdi-logo.png)
+
+- Initiative soll Forschungsdaten "erschließen, nachhaltig sichern und zugänglich machen sowie (inter-)national vernetzen"
+- Eingetragener Verein wissenschaftlicher Einrichtungen (ähnlich wie DFN, DINI...)
+- Förderprogramm mit bis zu 90 Mio. € pro Jahr (2019-2028)
+
+## Formeller Aufbau der NFDI
+
+- **Konsortien:** Fachbezogen, gefördert:\
+  NFDI4Objects, NFDI4Culture, NFDI4Memory, Text+, NFDI4Biodiversity...
+- **Basisdienste:** Fachübergreifend, gefördert:\
+  TS4NFDI, IAM4NFDI, Jupyter4NFDI...
+- **Sektionen:** Fachübergreifend, nicht gefördert:\
+  *(Meta)daten, Terminologien, Provenienz*, ...
+
+## Informeller Aufbau der NFDI
+
+- Organisationen
+- Projekte
+- Arbeitsgruppen
+- Publikationen 
+- Veranstaltungen
+- Dienste
+- Personen
+
+## Konsortium: NFDI4Objects
+
+- Materiellen Hinterlassenschaften der Menschheitsgeschichte
+- Archäologie und Verwandte Wissenschaften
+- <https://www.nfdi4objects.net/>
+
+## Basisdienst: TS4NFDI
+
+- Übergreifende Terminologie-Dienste
+- Zugriff auf Terminologien via **API Gateway**
+- **Service-Portal** mit Suchoberfläche, Erstellung von Terminologie-Listen und Vokabularen
+- <https://terminology.services.base4nfdi.de/>
+
+## Organisation: VZG
+
+- Verbundzentrale des Gemeinsamen Bibliotheksverbund
+- Zentraler Bibliothekskatalog **K10plus** und\
+  Suchindex **K10plus-zentral**
+- Bibliotheksmanagementsysteme (LBS, FOLIO)
+- Digitale Portale für Kultureinrichtungen
+- Technischer Dienstleister in mehreren NFDI-Konsortien\
+  und dem Basisdienst TS4NFDI
+
+## Dienste der VZG für die NFDI
+
+- Verzeichnisse (Metadaten)
+  - K10plus(-zentral) von Literatur, für alle (indirekt)
+  - [BARTOC] von Terminologien, für alle
+
+- Repositorien
+  - [OpenAgra](https://www.openagrar.de/) mit Forschungsdaten, für FAIRagro
+  - Textarchiv mit Forschungsdaten, für NFDI4Memory (geplant)
+  - [DANTE](https://dante.gbv.de/) mit Terminologien, für alle
+
+## Dienste der VZG für die NFDI
+
+- Portale
+  - [Kartenspeicher](https://kartenspeicher.gbv.de/) für NFDI4Memory:\
+    Schicke Rechercheoberfläche
+  - [N4O Knowledge Graph](https://graph.nfdi4objects.net/) für NFDI4Objects:\
+    Datenbank mit API (+ Discovery geplant)
+  - [BARTOC](https://bartoc.org): schicke Rechercheoberfläche (geplant)
+
+- Werkzeuge
+  - [Cocoda] für Terminologie-Mappings, übergreifend
+  - Validatoren und Analyse-Werkzeuge für Forschungsdaten und Metadaten, übergreifend
+
+<!-- TODO: Goobi, Grabungsdatenbank, Findbuch? -->
+
+# BARTOC & Cocoda
+
+## BARTOC
+
+- Verzeichnis von Terminologien, seit 2013
+- Informationen zu Sachgebieten, Herausgebern, APIs...
+- Liste von weiteren Terminologie-Verzeichnissen
+- DFG-Projekt (nicht NFDI) zum Ausbau 2025-2028\
+  siehe <https://doi.org/10.5281/zenodo.7673393>
+- Kooperation u.A. mit TS4NFDI
+- <https://bartoc.org/>
+
+## Cocoda
+
+- Sammlung, Erstellung und Pflege von Mappings
+- Webanwendung Cocoda (Client)
+- Datenbank-Backends für Terminologien und Mappings (JSKOS-Server u.A.)
+- Zugriff auf Terminologien via in BARTOC verzeichneter APIs
+- Login-Server für Single-Sign-On\
+  (ORCID, GitHub, Wikimedia...)
+
+---
+
+![](cocoda-screenshot.png)
+
+## Bedienung
+
+- Screencast <https://doi.org/10.5446/69732>
+- Login via ORCID, GitHub, Wikimedia-Account o.Ä.
+- <https://coli-conc.gbv.de/cocoda/nfdi4objects/>
+- Genauere Einführungen gerne in kleinerem Kreis,\
+  mit konkretem Anwendungsfall (Frau Röhl)
+
+# Anwendungsfall: NFDI4Objects Knowledge Graph
+
+## Was ist der N4O Graph?
+
+- Integration von Forschungsdaten über materielle Hinterlassenschaften der Menschheitsgeschichte
+- Semantisch verknüpfte Daten über Forschungsobjekte
+- Mehr als Metadaten über Daten-Sammlungen!
+- Standardisierter Zugriff via SPARQL-API
+- Aktuelle Entwicklungsversion: <https://nfdi4objects.github.io/n4o-graph/>
+
+## Aufbau des N4O KG
+
+```{mermaid}
+graph LR
+    metadata --> kg    
+    data[research data] --> kg
+    terminologies --> kg
+    subgraph kg[knowledge graph]
+        db(triple store)
+    end
+    kg -- SPARQL --> applications
+    kg --> ui[user interface]
+```
+
+## Datenintegration
+
+- CIDOC-CRM als gemeinsame RDF-Ontologie
+- ETL-Prozess mit Datenbereinigung
+- Integration mit Terminologien und Mappings
+
+## ETL-Prozess für Forschungsdaten
+
+1. **Extraktion** aus Forschungsdatenrepositorien oder -Portalen OAI-PMH
+2. Konvertierung von LIDO nach RDF
+3. Validierung
+3. **Transformation** mit Filtern und Anreicherung
+4. **Laden** in den Triple-Store
+
+## Beispiel
+
+> Objekte aus Edelmetall aus der Römerzeit
+
+. . .
+
+- CIDOC-CRM: "Objekte aus ... aus der ...-Zeit"
+- Vokabulare: Edelmetall, Römerzeit
+
+## Unterschiedliche Datenmodelle
+
+- Münze, Statue, Schwert... ⇒ **E18 Physical Thing**
+- Epoche, Dynastie, Zeitspanne... ⇒ **E4 Period**
+- *Alle Ontologien müssen auf CRM gemappt werden!*
+
+## Vokabulare 
+
+- Freitextfelder ("Aus Silber") sind nicht nutzbar
+- Vokabulare zur Identifikation\
+  z.B. <https://ikmk.smb.museum/ndp/material/1> *Silver*
+- Vokabulare für Suche
+  - Argentum ⇒ Silber ⇒  Edelmetall
+- BARTOC hilft passende Vokabulare zu finden und anzuwenden
+- Import relevanter Vokabulare in den N4O KG
+
+## Unterschiedliche Vokabulare
+
+- <https://ikmk.smb.museum/ndp/material/1> Silver
+- <https://d-nb.info/gnd/4133759-1> Silber
+- Pflege von Mappings mit Cocoda
+- Import relevanter Mappings in den N4O KG
+
+---
+
+![](cocoda-screenshot.png)
+
+# Zusammenfassung
+
+## Was ist was?
+
+- **BARTOC** zentrales Verzeichnis aller Terminologien (zumindest für NFDI4Objects) mit Verweisen auf jeweilige Terminologie-Repositorien
+- **DANTE** ein Terminologie-Repository
+- **TS4NFDI** hilft bei Aufbau und Zusammenführung von Terminologien und -Repositorien
+- **Cocoda** Werkzeug und Repository für Terminologie-Mappings
+
+## Motivation: Datenintegration
+
+- Gemeinsame Ontologien und Vokabulare
+- Mappings zwischen verschiedenen Vokabularen
+
+<!--
+## Venus
+
+TODO: screenshot, Suche in Wikidata
+-->
+
+[BARTOC]: https://bartoc.org/
