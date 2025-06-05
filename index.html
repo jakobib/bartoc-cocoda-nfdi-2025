@@ -179,8 +179,8 @@ Jakob Voß
 Datenmodell: <em>Ort, Person, Thema, Zahl…</em></li>
 <li class="fragment"><strong>Vokabular</strong><br>
 Werteliste: <em>Alles andere</em></li>
-<li class="fragment">Jeder Eintrag (Klasse, Konzept, Entität…) hat eine ID,<br>
-im Idealfall eine URI</li>
+<li class="fragment">Jeder Eintrag (Klasse, Konzept, Entität…) hat eine ID</li>
+<li class="fragment">Im Idealfall eine URI</li>
 </ul>
 </section>
 <section id="terminologie-mappings" class="slide level2">
@@ -188,7 +188,7 @@ im Idealfall eine URI</li>
 <ul>
 <li class="fragment">GND <a href="https://d-nb.info/gnd/4062527-8" class="uri">https://d-nb.info/gnd/4062527-8</a> <em>Venus (Planet)</em></li>
 <li class="fragment">= Wikidata <a href="http://www.wikidata.org/entity/Q313" class="uri">http://www.wikidata.org/entity/Q313</a> <em>Venus</em></li>
-<li class="fragment">≈ DDC <a href="http://dewey.info/class/523.42/e23/" class="uri">http://dewey.info/class/523.42/e23/</a> <em>Venus</em></li>
+<li class="fragment"><span class="math inline">\(\approx\)</span> DDC <a href="http://dewey.info/class/523.42/e23/" class="uri">http://dewey.info/class/523.42/e23/</a> <em>Venus</em></li>
 <li class="fragment">&lt; BK <a href="http://uri.gbv.de/terminology/bk/39.53" class="uri">http://uri.gbv.de/terminology/bk/39.53</a> <em>Planeten</em></li>
 </ul>
 </section>
@@ -196,7 +196,7 @@ im Idealfall eine URI</li>
 <h2>Möglichkeiten zur Erstellung und Pflege von Mappings</h2>
 <ol type="A">
 <li class="fragment">Als Teil <em>eines</em> Vokabulars (z.B. GND-Mappings)</li>
-<li class="fragment">In Dateien (CSV, SSSOM, RDF/Turtle…)</li>
+<li class="fragment">In Dateien (CSV, JSKOS, SSSOM, RDF/Turtle…)</li>
 <li class="fragment">In einer Mapping-Anwendung mit Datenbank und Benutzeroberfläche (<strong>Cocoda</strong>, MSCR, Amalgame…)</li>
 </ol>
 </section></section>
@@ -207,8 +207,7 @@ im Idealfall eine URI</li>
 </section>
 <section id="was-ist-die-nationale-forschungsdateninfrastruktur" class="slide level2">
 <h2>Was ist die Nationale Forschungsdateninfrastruktur?</h2>
-
-<img data-src="nfdi-logo.png" class="r-stretch"><ul>
+<ul>
 <li class="fragment">Initiative soll Forschungsdaten “erschließen, nachhaltig sichern und zugänglich machen sowie (inter-)national vernetzen”</li>
 <li class="fragment">Eingetragener Verein wissenschaftlicher Einrichtungen (ähnlich wie DFN, DINI…)</li>
 <li class="fragment">Förderprogramm mit bis zu 90 Mio. € pro Jahr (2019-2028)</li>
@@ -241,7 +240,7 @@ TS4NFDI, IAM4NFDI, Jupyter4NFDI…</li>
 <h2>Konsortium: NFDI4Objects</h2>
 <ul>
 <li class="fragment">Materiellen Hinterlassenschaften der Menschheitsgeschichte</li>
-<li class="fragment">Archäologie und Verwandte Wissenschaften</li>
+<li class="fragment">Archäologie und verwandte Wissenschaften</li>
 <li class="fragment"><a href="https://www.nfdi4objects.net/" class="uri">https://www.nfdi4objects.net/</a></li>
 </ul>
 </section>
@@ -251,6 +250,7 @@ TS4NFDI, IAM4NFDI, Jupyter4NFDI…</li>
 <li class="fragment">Übergreifende Terminologie-Dienste</li>
 <li class="fragment">Zugriff auf Terminologien via <strong>API Gateway</strong></li>
 <li class="fragment"><strong>Service-Portal</strong> mit Suchoberfläche, Erstellung von Terminologie-Listen und Vokabularen</li>
+<li class="fragment"><strong>Terminology Service Suite</strong> (JavaScript/React-Library) für Terminologie-Daten</li>
 <li class="fragment"><a href="https://terminology.services.base4nfdi.de/" class="uri">https://terminology.services.base4nfdi.de/</a></li>
 </ul>
 </section>
@@ -271,10 +271,10 @@ und dem Basisdienst TS4NFDI</li>
 <ul>
 <li class="fragment">Verzeichnisse (Metadaten)
 <ul>
-<li class="fragment">K10plus(-zentral) von Literatur, für alle (indirekt)</li>
-<li class="fragment"><a href="https://bartoc.org/">BARTOC</a> von Terminologien, für alle</li>
+<li class="fragment">K10plus(-zentral) über Literatur, für alle (indirekt)</li>
+<li class="fragment"><a href="https://bartoc.org/">BARTOC</a> über Terminologien, für alle</li>
 </ul></li>
-<li class="fragment">Repositorien
+<li class="fragment">Repositorien (Forschungsdaten &amp; Terminologien)
 <ul>
 <li class="fragment"><a href="https://www.openagrar.de/">OpenAgra</a> mit Forschungsdaten, für FAIRagro</li>
 <li class="fragment">Textarchiv mit Forschungsdaten, für NFDI4Memory (geplant)</li>
@@ -331,8 +331,8 @@ siehe <a href="https://doi.org/10.5281/zenodo.7673393" class="uri">https://doi.o
 </section>
 <section class="slide level2">
 
-
-<img data-src="cocoda-screenshot.png" class="r-stretch"></section>
+<p><img data-src="cocoda-screenshot.png" style="width:100.0%;height:80.0%"></p>
+</section>
 <section id="bedienung" class="slide level2">
 <h2>Bedienung</h2>
 <ul>
@@ -414,8 +414,8 @@ mit konkretem Anwendungsfall (Frau Röhl)</li>
 <section id="unterschiedliche-datenmodelle" class="slide level2">
 <h2>Unterschiedliche Datenmodelle</h2>
 <ul>
-<li class="fragment">Münze, Statue, Schwert… ⇒ <strong>E18 Physical Thing</strong></li>
-<li class="fragment">Epoche, Dynastie, Zeitspanne… ⇒ <strong>E4 Period</strong></li>
+<li class="fragment">Münze, Statue, Schwert… <span class="math inline">\(\Rightarrow\)</span> <strong>E18 Physical Thing</strong></li>
+<li class="fragment">Epoche, Dynastie, Zeitspanne… <span class="math inline">\(\Rightarrow\)</span> <strong>E4 Period</strong></li>
 <li class="fragment"><em>Alle Ontologien müssen auf CRM gemappt werden!</em></li>
 </ul>
 </section>
@@ -427,7 +427,7 @@ mit konkretem Anwendungsfall (Frau Röhl)</li>
 z.B. <a href="https://ikmk.smb.museum/ndp/material/1" class="uri">https://ikmk.smb.museum/ndp/material/1</a> <em>Silver</em></li>
 <li class="fragment">Vokabulare für Suche
 <ul>
-<li class="fragment">Argentum ⇒ Silber ⇒ Edelmetall</li>
+<li class="fragment">Argentum <span class="math inline">\(\Rightarrow\)</span> Silber <span class="math inline">\(\Rightarrow\)</span> Edelmetall</li>
 </ul></li>
 <li class="fragment">BARTOC hilft passende Vokabulare zu finden und anzuwenden</li>
 <li class="fragment">Import relevanter Vokabulare in den N4O KG</li>
@@ -444,8 +444,8 @@ z.B. <a href="https://ikmk.smb.museum/ndp/material/1" class="uri">https://ikmk.s
 </section>
 <section class="slide level2">
 
-
-<img data-src="cocoda-screenshot.png" class="r-stretch"></section></section>
+<p><img data-src="cocoda-screenshot.png" style="width:100.0%;height:80.0%"></p>
+</section></section>
 <section>
 <section id="zusammenfassung" class="title-slide slide level1 center">
 <h1>Zusammenfassung</h1>
@@ -463,14 +463,11 @@ z.B. <a href="https://ikmk.smb.museum/ndp/material/1" class="uri">https://ikmk.s
 <section id="motivation-datenintegration" class="slide level2">
 <h2>Motivation: Datenintegration</h2>
 <ul>
-<li class="fragment">Gemeinsame Ontologien und Vokabulare</li>
-<li class="fragment">Mappings zwischen verschiedenen Vokabularen</li>
+<li class="fragment">Zusammenführung von Forschungsdaten</li>
+<li class="fragment">Erfordert gemeinsame Ontologien und Vokabulare (BARTOC)</li>
+<li class="fragment">Mappings zwischen verschiedenen Vokabularen (Cocoda)</li>
+<li class="fragment"><a href="https://de.wikipedia.org/wiki/Venus" class="uri">https://de.wikipedia.org/wiki/Venus</a></li>
 </ul>
-<!--
-## Venus
-
-TODO: screenshot, Suche in Wikidata
--->
 
 </section></section>
     </div>

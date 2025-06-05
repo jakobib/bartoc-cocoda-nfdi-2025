@@ -30,27 +30,25 @@ authors:
   Datenmodell: *Ort, Person, Thema, Zahl...*
 - **Vokabular**\
   Werteliste: *Alles andere*
-- Jeder Eintrag (Klasse, Konzept, Entität...) hat eine ID,\
-  im Idealfall eine URI
+- Jeder Eintrag (Klasse, Konzept, Entität...) hat eine ID
+- Im Idealfall eine URI
 
 ## Terminologie-Mappings
 
 - GND <https://d-nb.info/gnd/4062527-8> *Venus (Planet)*
 - = Wikidata <http://www.wikidata.org/entity/Q313> *Venus*
-- ≈ DDC <http://dewey.info/class/523.42/e23/> *Venus*
+- $\approx$ DDC <http://dewey.info/class/523.42/e23/> *Venus*
 - < BK <http://uri.gbv.de/terminology/bk/39.53> *Planeten*
 
 ## Möglichkeiten zur Erstellung und Pflege von Mappings
 
 A) Als Teil *eines* Vokabulars (z.B. GND-Mappings)
-B) In Dateien (CSV, SSSOM, RDF/Turtle...) 
+B) In Dateien (CSV, JSKOS, SSSOM, RDF/Turtle...) 
 C) In einer Mapping-Anwendung mit Datenbank und Benutzeroberfläche (**Cocoda**, MSCR, Amalgame...)
 
 # NFDI
 
 ## Was ist die Nationale Forschungsdateninfrastruktur?
-
-![](nfdi-logo.png)
 
 - Initiative soll Forschungsdaten "erschließen, nachhaltig sichern und zugänglich machen sowie (inter-)national vernetzen"
 - Eingetragener Verein wissenschaftlicher Einrichtungen (ähnlich wie DFN, DINI...)
@@ -78,7 +76,7 @@ C) In einer Mapping-Anwendung mit Datenbank und Benutzeroberfläche (**Cocoda**,
 ## Konsortium: NFDI4Objects
 
 - Materiellen Hinterlassenschaften der Menschheitsgeschichte
-- Archäologie und Verwandte Wissenschaften
+- Archäologie und verwandte Wissenschaften
 - <https://www.nfdi4objects.net/>
 
 ## Basisdienst: TS4NFDI
@@ -86,6 +84,7 @@ C) In einer Mapping-Anwendung mit Datenbank und Benutzeroberfläche (**Cocoda**,
 - Übergreifende Terminologie-Dienste
 - Zugriff auf Terminologien via **API Gateway**
 - **Service-Portal** mit Suchoberfläche, Erstellung von Terminologie-Listen und Vokabularen
+- **Terminology Service Suite** (JavaScript/React-Library) für Terminologie-Daten
 - <https://terminology.services.base4nfdi.de/>
 
 ## Organisation: VZG
@@ -101,10 +100,10 @@ C) In einer Mapping-Anwendung mit Datenbank und Benutzeroberfläche (**Cocoda**,
 ## Dienste der VZG für die NFDI
 
 - Verzeichnisse (Metadaten)
-  - K10plus(-zentral) von Literatur, für alle (indirekt)
-  - [BARTOC] von Terminologien, für alle
+  - K10plus(-zentral) über Literatur, für alle (indirekt)
+  - [BARTOC] über Terminologien, für alle
 
-- Repositorien
+- Repositorien (Forschungsdaten & Terminologien)
   - [OpenAgra](https://www.openagrar.de/) mit Forschungsdaten, für FAIRagro
   - Textarchiv mit Forschungsdaten, für NFDI4Memory (geplant)
   - [DANTE](https://dante.gbv.de/) mit Terminologien, für alle
@@ -147,7 +146,7 @@ C) In einer Mapping-Anwendung mit Datenbank und Benutzeroberfläche (**Cocoda**,
 
 ---
 
-![](cocoda-screenshot.png)
+![](cocoda-screenshot.png){width=100% height=80%}
 
 ## Bedienung
 
@@ -181,6 +180,12 @@ graph LR
     kg --> ui[user interface]
 ```
 
+::: {.content-visible when-format="pdf"}
+
+![](n4o-graph.png){width=100% height=60%}
+
+:::
+
 ## Datenintegration
 
 - CIDOC-CRM als gemeinsame RDF-Ontologie
@@ -206,8 +211,8 @@ graph LR
 
 ## Unterschiedliche Datenmodelle
 
-- Münze, Statue, Schwert... ⇒ **E18 Physical Thing**
-- Epoche, Dynastie, Zeitspanne... ⇒ **E4 Period**
+- Münze, Statue, Schwert... $\Rightarrow$ **E18 Physical Thing**
+- Epoche, Dynastie, Zeitspanne... $\Rightarrow$ **E4 Period**
 - *Alle Ontologien müssen auf CRM gemappt werden!*
 
 ## Vokabulare 
@@ -216,7 +221,7 @@ graph LR
 - Vokabulare zur Identifikation\
   z.B. <https://ikmk.smb.museum/ndp/material/1> *Silver*
 - Vokabulare für Suche
-  - Argentum ⇒ Silber ⇒  Edelmetall
+  - Argentum $\Rightarrow$ Silber $\Rightarrow$ Edelmetall
 - BARTOC hilft passende Vokabulare zu finden und anzuwenden
 - Import relevanter Vokabulare in den N4O KG
 
@@ -229,7 +234,7 @@ graph LR
 
 ---
 
-![](cocoda-screenshot.png)
+![](cocoda-screenshot.png){width=100% height=80%}
 
 # Zusammenfassung
 
@@ -242,13 +247,9 @@ graph LR
 
 ## Motivation: Datenintegration
 
-- Gemeinsame Ontologien und Vokabulare
-- Mappings zwischen verschiedenen Vokabularen
-
-<!--
-## Venus
-
-TODO: screenshot, Suche in Wikidata
--->
+- Zusammenführung von Forschungsdaten
+- Erfordert gemeinsame Ontologien und Vokabulare (BARTOC)
+- Mappings zwischen verschiedenen Vokabularen (Cocoda)
+- <https://de.wikipedia.org/wiki/Venus>
 
 [BARTOC]: https://bartoc.org/
